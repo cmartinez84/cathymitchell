@@ -12,14 +12,40 @@
   <body>
     <h1 class"jumbotron">Welcome to the Catchy Mitchell Homepage </h1>
     <h2>"The Billy Mays of the Kitchen"</h2>
-  <!-- purchase -->
+  <!-- modal for orderform receitp -->
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p id="results">
+
+            </p>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- orderform -->
   <div id="orderForm" class="purchase">
     <form class="orderForm" action="index.html" method="post">
       <label for="nameInput">Name:</label>
       <input id="nameInput" type="text" name="nameInput" value="">
       <label for="addressInput">Address:</label>
       <input id="addressInput" type="text" name="addressInput" value="">
-      <button id="submitOrder" class="btn btn-danger" type="submit" name="button">Submit Order</button>
+      <button id="submitOrder" class="btn btn-danger" type="submit" name="button" data-toggle="modal" data-target="#myModal">Submit Order</button>
     </form>
     <div id="receipt" class="">
 
@@ -36,7 +62,7 @@
       <input id="appointmentStart" type="text" name="appointmentStart" value="">
       <label for="appointmentEnd">What time would you like to end by?</label>
       <input id="appointmentEnd" type="text" name="appointmentEnd" value="">
-      <button id="submitAppointment" class="btn btn-danger" type="submit" name="button">Submit</button>
+      <button id="submitAppointment" class="btn btn-danger" type="submit" name="button" data-toggle="modal" data-target="#myModal">Submit</button>
     </form>
     <div id="bookingConfirmation" class="">
 
@@ -47,12 +73,12 @@
   <div id="calculator" class="calculator">
     <form class="calculator" action="index.html" method="post">
       <label for="gramInput">Grams</label>
-      <input class="gramInput"type="text" name="gramInput" value="" placeholder="only in grams!">
-      <button class="btn btn-success" id="decigrams" type="button" name="decigrams">Decigrams</button>
-      <button class="btn btn-success" id="centigrams" type="button" name="button">Centigrams</button>
-      <button class="btn btn-success" id="milligrams" type="button" name="milligrams">Milligrams</button>
-      <button class="btn btn-success" id="kilograms" type="button" name="kilograms">Kilograms</button>
-      <button class="btn btn-success" id="hellagrams" type="button" name="hellagrams">Hellagrams</button>
+      <input id="gramInput"type="text" name="gramInput" value="" placeholder="only in grams!">
+      <button class="btn btn-success" id="decigrams" type="button" name="decigrams" data-toggle="modal" data-target="#myModal">Decigrams</button>
+      <button class="btn btn-success" id="centigrams" type="button" name="button" data-toggle="modal" data-target="#myModal">Centigrams</button>
+      <button class="btn btn-success" id="milligrams" type="button" name="milligrams" data-toggle="modal" data-target="#myModal">Milligrams</button>
+      <button class="btn btn-success" id="kilograms" type="button" name="kilograms" data-toggle="modal" data-target="#myModal">Kilograms</button>
+      <button class="btn btn-success" id="hellagrams" type="button" name="hellagrams" data-toggle="modal" data-target="#myModal">Hellagrams</button>
     </form>
 
   </div>
