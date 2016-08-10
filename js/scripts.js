@@ -18,15 +18,17 @@ var kilograms = function(input){
   return result;
 }
 
-
+var removeSurvey = function(){
+  $("#results").removeClass("hidden");
+  $("#surveyId").addClass("hidden");
+}
 
 // *****************************
 // User Interface/Front-End
 // *****************************
-
-// *****orderform******
-$(function() {
+  $(function() {
   $('#submitOrder').click(function(event) {
+    removeSurvey();
     var name = $('#nameInput').val();
     var address = $('#addressInput').val();
     var result = "Thank you " + name + " for your purchase! Your item will be delivered shortly to " + address; + ".";
@@ -36,6 +38,7 @@ $(function() {
   });
   // *****booking appointments******
   $('#submitAppointment').click(function(event) {
+    removeSurvey();
     var date = $('#appointmentDate').val();
     var name = $('#appointmentName').val();
     var start = $('#appointmentStart').val();
@@ -48,6 +51,7 @@ $(function() {
   });
   // *****conversion******
     $('#decigrams').click(function(event) {
+      removeSurvey();
       var grams = parseFloat($('#gramInput').val());
       var grams = decigrams(grams);
       $("#results").text(grams);
@@ -56,6 +60,7 @@ $(function() {
 
   });
   $('#centigrams').click(function(event) {
+    removeSurvey();
     var grams = parseFloat($('#gramInput').val());
     var grams = centigrams(grams);
     $("#results").text(grams);
@@ -63,6 +68,7 @@ $(function() {
     event.preventDefault();
   });
   $('#milligrams').click(function(event) {
+    removeSurvey();
     var grams = parseFloat($('#gramInput').val());
     var grams = milligrams(grams);
     $("#results").text(grams);
@@ -70,6 +76,7 @@ $(function() {
     event.preventDefault();
   });
   $('#kilograms').click(function(event) {
+    removeSurvey();
     var grams = parseFloat($('#gramInput').val());
     var grams = kilograms(grams);
     $("#results").text(grams);
@@ -77,9 +84,14 @@ $(function() {
     event.preventDefault();
   });
   $('#hellagrams').click(function(event) {
+    removeSurvey();
     var grams = "hella lot";
     $("#results").text(grams);
     console.log(grams);
     event.preventDefault();
 });
+  $('#surveyButton').click(function() {
+    $("#surveyId").removeClass("hidden");
+    $("#results").addClass("hidden");
+  });
 });

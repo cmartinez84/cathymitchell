@@ -9,9 +9,16 @@
     <script src="js/scripts.js" type="text/javascript"></script>
     <title>I am the Walrus</title>
   </head>
-  <body>
-    <h1 class"jumbotron">Welcome to the Catchy Mitchell Homepage </h1>
+
+  <body class="container">
+    <div class="jumbotron">
+
+    <h1 class="">Welcome to the Catchy Mitchell Homepage </h1>
     <h2>"The Billy Mays of the Kitchen"</h2>
+    <img id="cathy" src="img/cathy.jpg" alt="cathy mitchell" />
+    <img id="carrot" src="img/background2.jpg" alt="" />
+  </div>
+
   <!-- modal for orderform receitp -->
 
 
@@ -26,9 +33,44 @@
             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
           <div class="modal-body">
-            <p id="results">
-
-            </p>
+            <p id="results"></p>
+            <form id='surveyId' class="hidden" action="index.html" method="post">
+            <p>Please rate our site</p>
+            <div class="score">
+              <label>
+                <input type="radio" name="points" value="1" checked>
+                1
+              </label>
+            </div>
+            <div class="score">
+              <label>
+                <input type="radio" name="points" value="2">
+                2
+              </label>
+            </div>
+            <div class="score">
+              <label>
+                <input type="radio" name="points" value="3">
+                3
+              </label>
+            </div>
+            <div class="score">
+              <label>
+                <input type="radio" name="points" value="4">
+                4
+              </label>
+            </div>
+            <div class="score">
+              <label>
+                <input type="radio" name="points" value="5">
+                5
+              </label>
+              <label for="comments">Comments? Questions? Concerns? Please tell us a little about your experience today and how our site can better suit your needs!</label>
+              <input id="dearCathy" type="text" name="comments" value="" placeholder="Dear Cathy Mitchell...">
+            </div>
+            <button class="btn btn-info" type="button" name="button" data-dismiss="modal">Submit</button>
+            <button class="btn btn-default" type="button" name="button" data-dismiss="modal">Cancel</button>
+          </form>
           </div>
           <div class="modal-footer">
           </div>
@@ -40,6 +82,7 @@
 
   <!-- orderform -->
   <div id="orderForm" class="purchase">
+    <h3>Please send your address if you'd like to receive a free subscription to Cathy Mitchell's Magazine</h3>
     <form class="orderForm" action="index.html" method="post">
       <label for="nameInput">Name:</label>
       <input id="nameInput" type="text" name="nameInput" value="">
@@ -52,12 +95,14 @@
     </div>
   </div>
   <!-- booking appointments -->
-  <div class="">
+  <div id="bookingAppointments" class="">
+    <h3>Take a cooking class with Cathy Mitchell!</h3>
+    <p>Please enter your name, date, and times you'd like to start and end a complimentary(pre-recorded) cooking lesson with Cathy!</p>
     <form class="bookAppointment" action="index.html" method="post">
       <label for="appointmentDate">Date:</label>
       <input id="appointmentDate"type="text" name="appointmentDate" value="">
       <label for="appointmentName">Name:</label>
-      <input id="appointmentName"type="text" name="appointmentName" value="">
+      <input id="appointmentName"type="text" name="appointmentName" value=""><br>
       <label for="appointmentStart">What time would you like to start?</label>
       <input id="appointmentStart" type="text" name="appointmentStart" value="">
       <label for="appointmentEnd">What time would you like to end by?</label>
@@ -71,6 +116,8 @@
 
   <!-- conversion -->
   <div id="calculator" class="calculator">
+    <h3>Please enjoy our complimentary metric weight convertor!</h3>
+    <p>Unforunately, at this time we are only able to convert grams to larger measurements. Please check back for further code updates!</p>
     <form class="calculator" action="index.html" method="post">
       <label for="gramInput">Grams</label>
       <input id="gramInput"type="text" name="gramInput" value="" placeholder="only in grams!">
@@ -82,6 +129,6 @@
     </form>
 
   </div>
-
+  <button  class ="btn btn-primary btn-lg center-block" id=surveyButton type="button" name="surveybutton" data-toggle="modal" data-target="#myModal">Please Take our Survey!</button>
   </body>
 </html>
