@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <title>I am the Walrus</title>
+  </head>
+  <body>
+    <h1 class"jumbotron">Welcome to the Catchy Mitchell Homepage </h1>
+    <h2>"The Billy Mays of the Kitchen"</h2>
+  <!-- purchase -->
+  <div id="orderForm" class="purchase">
+    <form class="orderForm" action="index.html" method="post">
+      <label for="nameInput">Name:</label>
+      <input id="nameInput" type="text" name="nameInput" value="">
+      <label for="addressInput">Address:</label>
+      <input id="addressInput" type="text" name="addressInput" value="">
+      <button id="submitOrder" class="btn btn-danger" type="submit" name="button">Submit Order</button>
+    </form>
+    <div id="receipt" class="">
+
+    </div>
+  </div>
+  <!-- booking appointments -->
+  <div class="">
+    <form class="bookAppointment" action="index.html" method="post">
+      <label for="appointmentDate">Date:</label>
+      <input id="appointmentDate"type="text" name="appointmentDate" value="">
+      <label for="appointmentName">Name:</label>
+      <input id="appointmentName"type="text" name="appointmentName" value="">
+      <label for="appointmentStart">What time would you like to start?</label>
+      <input id="appointmentStart" type="text" name="appointmentStart" value="">
+      <label for="appointmentEnd">What time would you like to end by?</label>
+      <input id="appointmentEnd" type="text" name="appointmentEnd" value="">
+      <button id="submitAppointment" class="btn btn-danger" type="submit" name="button">Submit</button>
+    </form>
+    <div id="bookingConfirmation" class="">
+
+    </div>
+  </div>
+
+  <!-- conversion -->
+  <div id="calculator" class="calculator">
+    <form class="calculator" action="index.html" method="post">
+      <label for="gramInput">Grams</label>
+      <input class="gramInput"type="text" name="gramInput" value="" placeholder="only in grams!">
+      <button class="btn btn-success" id="decigrams" type="button" name="decigrams">Decigrams</button>
+      <button class="btn btn-success" id="centigrams" type="button" name="button">Centigrams</button>
+      <button class="btn btn-success" id="milligrams" type="button" name="milligrams">Milligrams</button>
+      <button class="btn btn-success" id="kilograms" type="button" name="kilograms">Kilograms</button>
+      <button class="btn btn-success" id="hellagrams" type="button" name="hellagrams">Hellagrams</button>
+    </form>
+
+  </div>
+
+  </body>
+</html>
